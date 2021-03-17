@@ -21,6 +21,7 @@ class(grd)
 attr(grd,"package")
 #numeros de pontos em cada pixel do raster(rgdal)
 cp<-count.points(pontos_ra,grd)
+#exportando resultado
 writeRaster(cp, "out.tif", format="GTiff", overwrite = TRUE)
 
 #outro método mais facíl, mas o campo interpolado não pode possuir valores nulos e o resultado deve ser mascarado (masc)
